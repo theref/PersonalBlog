@@ -10,9 +10,9 @@ THEME = "notmyidea"
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/London'
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = u'en_GB'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
