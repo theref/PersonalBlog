@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/Users/jamescampbell/anaconda3/envs/blog/bin python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
