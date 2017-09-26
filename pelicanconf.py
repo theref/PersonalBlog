@@ -6,7 +6,7 @@ AUTHOR = 'James Campbell'
 SITENAME = 'James Campbell'
 SITEURL = ''
 
-THEME = "notmyidea"
+THEME = 'themes/pelican-elegant-1.3/'
 
 PATH = 'content'
 
