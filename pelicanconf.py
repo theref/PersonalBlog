@@ -6,6 +6,8 @@ AUTHOR = 'James Campbell'
 SITENAME = 'James Campbell'
 SITEURL = ''
 
+THEME = "notmyidea"
+
 PATH = 'content'
 
 TIMEZONE = 'Europe/Paris'
