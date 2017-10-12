@@ -8,6 +8,8 @@ My super title
 :slug: my-super-post
 :authors: Alexis Metaireau, Conan Doyle
 :summary: Short version for index and feeds
+:status: draft
+
 
 
 test post. asdf asdfasdf
