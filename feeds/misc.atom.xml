@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>James Campbell - misc</title><link href="jamescampbell.org.uk/" rel="alternate"></link><link href="jamescampbell.org.uk/feeds/misc.atom.xml" rel="self"></link><id>jamescampbell.org.uk/</id><updated>2017-10-12T00:00:00+01:00</updated><entry><title>PGP Signatures on Email</title><link href="jamescampbell.org.uk/pgp.html" rel="alternate"></link><published>2017-10-12T00:00:00+01:00</published><updated>2017-10-12T00:00:00+01:00</updated><author><name>James Campbell</name></author><id>tag:None,2017-10-12:jamescampbell.org.uk/pgp.html</id><summary type="html">&lt;p&gt;You're probably here because you've received an email from me with an attachment called &lt;code&gt;signature.asc&lt;/code&gt; or with lines at the top similar to:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>James Campbell - misc</title><link href="http://www.jamescampbell.org.uk/" rel="alternate"></link><link href="http://www.jamescampbell.org.uk/feeds/misc.atom.xml" rel="self"></link><id>http://www.jamescampbell.org.uk/</id><updated>2017-10-12T00:00:00+01:00</updated><entry><title>PGP Signatures on Email</title><link href="http://www.jamescampbell.org.uk/pgp.html" rel="alternate"></link><published>2017-10-12T00:00:00+01:00</published><updated>2017-10-12T00:00:00+01:00</updated><author><name>James Campbell</name></author><id>tag:www.jamescampbell.org.uk,2017-10-12:/pgp.html</id><summary type="html">&lt;p&gt;You're probably here because you've received an email from me with an attachment called &lt;code&gt;signature.asc&lt;/code&gt; or with lines at the top similar to:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;-----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 &lt;/pre&gt;&lt;/div&gt;
@@ -51,7 +51,7 @@ VoMAn1HIKzpRrnveSEizzQBLMANkh648
 &lt;h2&gt;Public Keys&lt;/h2&gt;
 &lt;p&gt;You will also need my public key which I have published on the network of PGP key servers (e.g. &lt;a href="http://pgp.mit.edu"&gt;http://pgp.mit.edu&lt;/a&gt; ). Most of the software tools will allow you to search the key servers using my email addresses although some will only allow you to search using a key's unique ID. Mine is &lt;code&gt;9857B95A&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Some software implementations support importing keys from a QR code:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="My Key" src="jamescampbell.org.uk/images/myopenpgpfpr.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My Key" src="http://www.jamescampbell.org.uk/images/myopenpgpfpr.png"&gt;&lt;/p&gt;
 &lt;p&gt;If, for whatever reason, you are unable to retrieve the correct key, please reply to the original email and I will gladly send it to you directly.&lt;/p&gt;
 &lt;p&gt;Once you have your chosen toolkit installed and have obtained the public key, you should be able to verify that one of my signed messages is indeed genuine and has not been altered since it was sent.&lt;/p&gt;
 &lt;h2&gt;Fully Encrypted Email&lt;/h2&gt;
