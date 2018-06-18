@@ -10,8 +10,7 @@ THEME = 'themes/pelican-elegant-1.3/'
 
 PATH = 'content'
 
-# PLUGINS = ['sitemap', 'extract_toc', 'tipue_search']
-MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc']
+# MARKDOWN = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc']
 DIRECT_TEMPLATES = (('index', 'tags', 'categories',
                      'archives', 'search', '404'))
 STATIC_PATHS = ['theme/images', 'images', 'pdfs']
